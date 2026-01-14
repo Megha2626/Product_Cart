@@ -1,0 +1,187 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  background: hsl(30, 33%, 97%)
+;
+}
+
+
+header {
+  padding: 20px 30px;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  padding: 30px;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.card h4 {
+  margin: 10px 0 2px;
+  font-size: 15px;
+}
+
+.card h5 {
+  margin: 0;
+  font-size: 13px;
+  color:charcoal gray;
+}
+
+.card p {
+  margin-top: 6px;
+  font-weight: bold;
+  color: hsl(16, 75%, 44%)
+;
+}
+
+
+.cart {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.cart h2 {
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+
+.cart h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border-bottom: 1px solid hsl(0, 0%, 93%);
+  padding-bottom: 6px;
+}
+
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.confirm-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 24px;
+  border: none;
+  background: hsl(16, 75%, 44%);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: hsl(16, 75%, 38%);
+}
+
+.add-to-cart {
+  margin-top: auto; 
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid hsl(16, 75%, 44%);
+  background: white;
+  color: hsl(16, 75%, 44%);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background: hsl(16, 75%, 44%);
+  color: white;
+}
+
